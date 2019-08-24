@@ -1,0 +1,60 @@
+-
+  let pages = [
+    {
+      name: 'About',
+      slug: 'about',
+      link: '',
+    },
+    {
+      name: 'Projects',
+      slug: 'projects',
+      link: 'projects'
+    },
+    {
+      name: 'Contact',
+      slug: 'contact',
+      link: 'contact'
+    }
+  ]
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title #{title} | Rowel Dela Fuente
+    meta(name='description' content='Rowel Dela Fuente, a backend web developer that is based on the Metro Manila, Philippines')
+    meta(name='keywords' content='rowel, dela fuente, backend, back-end, web, developer, philippines')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    link(rel='stylesheet' href='//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
+    link(rel='stylesheet' href='//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto&display=swap')
+    link(rel='stylesheet' href='/stylesheets/style.css')
+    link(rel='stylesheet' href='/stylesheets/glitch.css')
+    link(rel='stylesheet' href='/stylesheets/blink.css')
+  body
+    header
+    main
+      div#wrapper.d-flex
+        div#sidebar-wrapper
+          div.sidebar-heading
+            div.glitch.text-uppercase(data-text='Rowel Dela Fuente') Rowel Dela Fuente
+          div.list-group.list-group-flush.mt-3
+            each val, index in pages
+              a.list-group-item.list-group-item-action(href='/' + val.link class=(page == val.slug ? 'active' : '')) #{val.name}
+                if page == val.slug
+                  | #[span.blink |]
+        div#page-content-wrapper
+          button#menu-toggle.btn.btn-default.m-3(aria-label='Toggle Menu')
+            span.fa.fa-bars
+          div.container-fluid.m-3
+            h1= title
+            div.col-lg-7.col-xl-5
+              div.mt-5
+                block content
+    footer
+
+  script(src='//code.jquery.com/jquery-3.4.1.min.js' integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous')
+
+  script.
+    window.jQuery || document.write('<script src="javascripts/vendor/jquery-3.4.1.min.js"><\/script>')
+  script(src='javascripts/script.js')
