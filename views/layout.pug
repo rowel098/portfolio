@@ -46,11 +46,12 @@ html(lang='en')
         div#page-content-wrapper
           button#menu-toggle.btn.btn-default.m-3(aria-label='Toggle Menu')
             span.fa.fa-bars
-          div.container-fluid.m-3
-            h1= title
-            div.col-lg-7.col-xl-5
-              div.mt-5
-                block content
+          div.container-fluid
+            div.p-3
+              h1= title
+              div.col-lg-7.col-xl-5
+                div.mt-5
+                  block content
     footer
 
   script(src='//code.jquery.com/jquery-3.4.1.min.js' integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous')

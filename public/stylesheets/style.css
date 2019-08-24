@@ -15,7 +15,7 @@ body {
 #sidebar-wrapper {
   border-right: 3px solid rgba(0,0,0,.125);
   min-height: 100vh;
-  margin-left: -15rem;
+  margin-left: calc(-15rem - 3px);
   -webkit-transition: margin .25s ease-out;
   -moz-transition: margin .25s ease-out;
   -o-transition: margin .25s ease-out;
