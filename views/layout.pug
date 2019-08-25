@@ -19,6 +19,16 @@
 doctype html
 html(lang='en')
   head
+    <!-- Global site tag (gtag.js) Google Analytics -->
+    script(async src='https://www.googletagmanager.com/gtag/js?id=UA-146406098-1')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+          dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-146406098-1');
     meta(charset='utf-8')
     title #{title} | Rowel Dela Fuente
     meta(name='description' content='Rowel Dela Fuente, a backend web developer that is based on the Metro Manila, Philippines')
