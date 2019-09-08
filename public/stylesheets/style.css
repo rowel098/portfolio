@@ -78,8 +78,7 @@ body {
 
 .list-group-item.active:before,
 .list-group-item:hover:before {
-  content: "\f054";
-  font-family: FontAwesome;
+  content: "\203A";
   margin-right: 10px;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
